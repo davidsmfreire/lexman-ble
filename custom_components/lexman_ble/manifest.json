@@ -1,17 +1,17 @@
 {
-  "version": "0.1.0",
   "domain": "lexman_ble",
   "name": "LexmanBLE",
-  "documentation": "https://github.com/davidsmfreire/lexman-ble",
-  "issue_tracker": "https://github.com/davidsmfreire/lexman-ble/issues",
-  "dependencies": ["bluetooth_adapters"],
-  "config_flow": true,
-  "codeowners": ["@davidsmfreire"],
   "bluetooth": [
     {
       "local_name": "CCT smart bulb"
     }
   ],
+  "codeowners": ["@davidsmfreire"],
+  "config_flow": true,
+  "dependencies": ["bluetooth_adapters"],
+  "documentation": "https://github.com/davidsmfreire/lexman-ble",
   "iot_class": "local_polling",
-  "requirements": ["bluetooth-data-tools==1.20.0", "lexman-ble==0.1.0"]
+  "issue_tracker": "https://github.com/davidsmfreire/lexman-ble/issues",
+  "requirements": ["bluetooth-data-tools==1.20.0", "lexman-ble==0.1.0"],
+  "version": "0.1.0"
 }
