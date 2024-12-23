@@ -24,7 +24,9 @@ pip install lexman-ble
 
 Home assistant installation through [HACS](https://www.hacs.xyz/):
 
-HACS > Integrations > Plus > LexmanBLE
+HACS > Menu > Custom repositories > Paste `https://github.com/davidsmfreire/lexman-ble` and select Type "Integration"
+
+Then search for LexmanBLE and download.
 
 **The custom component will set up the following platforms.**
 
