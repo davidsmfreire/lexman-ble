@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "lexman-ble"
+version = "0.1.0"
+description = "Lexman CCT Smart Bulb control through bluetooth in Python"
+authors = ["davidsmfreire <davidsmfreire@gmail.com>"]
+readme = "README.md"
+packages = [{include = "lexman_ble", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12.0,<3.13"
+bleak-retry-connector = ">=2.3.0"
+bleak = ">=0.19.0"
+parse = "^1.20.2"
+bluetooth-data-tools = "1.20.0"
+
+[tool.poetry.group.ha.dependencies]
+homeassistant = "^2024.12.2"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+ruff = "^0.8.3"
+mypy = "^1.13.0"
+isort = "^5.13.2"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

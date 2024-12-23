@@ -1,0 +1,7 @@
+{
+  "name": "Lexman",
+  "hacs": "0.1.0",
+  "domains": ["light"],
+  "iot_class": "Local Polling",
+  "homeassistant": "0.118.0"
+}
