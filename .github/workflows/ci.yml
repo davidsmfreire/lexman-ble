@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
-      - uses: actions/setup-python@v3
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - uses: pre-commit/action@v2.0.3
+      - uses: pre-commit/action@v3.0.1
 
   # Make sure commit messages follow the conventional commits convention:
   # https://www.conventionalcommits.org
@@ -71,7 +71,7 @@ jobs:
   #   steps:
   #     - uses: actions/checkout@v4.2.2
   #     - name: Set up Python
-  #       uses: actions/setup-python@v3
+  #       uses: actions/setup-python@v5
   #       with:
   #         python-version: ${{ matrix.python-version }}
   #     - uses: snok/install-poetry@v1
@@ -107,7 +107,7 @@ jobs:
       # - Create GitHub release
       # - Publish to PyPI
       - name: Python Semantic Release
-        uses: python-semantic-release/python-semantic-release@v7.34.6
+        uses: python-semantic-release/python-semantic-release@v9.15.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pypi_token: ${{ secrets.PYPI_TOKEN }}
