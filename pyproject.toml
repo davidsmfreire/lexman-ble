@@ -30,3 +30,10 @@ dev = [
 [build-system]
 requires = ["uv_build>=0.10.7,<0.11.0"]
 build-backend = "uv_build"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+build_command = "uv build"
+exclude_commit_patterns = [
+    '''deps(?:\([^)]*?\))?: .+''',
+]
