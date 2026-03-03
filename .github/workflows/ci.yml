@@ -88,6 +88,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: release
     if: github.ref == 'refs/heads/main'
+    permissions:
+      id-token: write
+      contents: write
     needs:
       - lint
       - commitlint
