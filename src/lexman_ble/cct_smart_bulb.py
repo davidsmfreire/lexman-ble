@@ -104,8 +104,10 @@ class LexmanCCTSmartBulb:
 
     @property
     def brightness(self) -> Optional[int]:
-        """Return current brightness 0-254."""
-        return self._state.brightness
+        """Return current brightness 0-255."""
+        if self._state.brightness is None:
+            return None
+        return round(self._state.brightness / 254 * 255)
 
     @property
     def temperature(self) -> Optional[int]:
@@ -151,7 +153,7 @@ class LexmanCCTSmartBulb:
             raise ValueError(f"Value `{value}` is outside the valid range of 0 - 100")
         brightness = round(max(min(100, value), 0) / 100 * 254)
         await self._send_command(CctSmartBulbCommand.BRIGHTNESS.set(brightness))
-        self._state = replace(self._state, brightness=value)
+        self._state = replace(self._state, brightness=brightness)
 
     async def set_temperature(self, value: int) -> None:
         """Set the temperature. Value from 2700 to 6500, where 2700 is warmer and 6500 is cooler"""
@@ -165,7 +167,7 @@ class LexmanCCTSmartBulb:
         )
         temperature = max(min(CCT_TEMPERATURE_MAX, temperature), CCT_TEMPERATURE_MIN)
         await self._send_command(CctSmartBulbCommand.TEMPERATURE.set(temperature))
-        self._state = replace(self._state, temperature=value)
+        self._state = replace(self._state, temperature=temperature)
 
     async def stop(self) -> None:
         """Stop the LEDBLE."""
