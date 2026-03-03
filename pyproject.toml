@@ -33,7 +33,6 @@ build-backend = "uv_build"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
-build_command = "uv build"
 exclude_commit_patterns = [
     '''deps(?:\([^)]*?\))?: .+''',
 ]
