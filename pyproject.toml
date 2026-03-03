@@ -1,6 +1,6 @@
 [project]
 name = "lexman-ble"
-version = "0.1.0"
+version = "0.1.1"
 description = "Lexman CCT Smart Bulb control through bluetooth in Python"
 authors = [{name = "David Freire", email = "davidsmfreire@gmail.com"}]
 readme = "README.md"
