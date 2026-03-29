@@ -12,6 +12,6 @@
   "documentation": "https://github.com/davidsmfreire/lexman-ble",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/davidsmfreire/lexman-ble/issues",
-  "requirements": ["bluetooth-data-tools==1.20.0", "lexman-ble==0.1.0"],
-  "version": "0.1.0"
+  "requirements": ["lexman-ble==0.1.2"],
+  "version": "0.1.1"
 }

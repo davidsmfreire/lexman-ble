@@ -854,7 +854,7 @@ wheels = [
 
 [[package]]
 name = "lexman-ble"
-version = "0.1.1"
+version = "0.1.2"
 source = { editable = "." }
 dependencies = [
     { name = "bleak" },
@@ -879,7 +879,7 @@ ha = [
 requires-dist = [
     { name = "bleak", specifier = ">=0.19.0" },
     { name = "bleak-retry-connector", specifier = ">=2.3.0" },
-    { name = "bluetooth-data-tools", specifier = "==1.20.0" },
+    { name = "bluetooth-data-tools", specifier = ">=1.20.0,<2.0.0" },
     { name = "parse", specifier = "~=1.20.2" },
 ]
 
