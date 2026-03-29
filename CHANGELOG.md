@@ -148,7 +148,7 @@ Signed-off-by: dependabot[bot] <support@github.com>
 - Add write permissions
   ([`bd0c64d`](https://github.com/davidsmfreire/lexman-ble/commit/bd0c64d429a7472364c1d5f852283bf4d052ca3c))
 
-- Excape label colors
+- Escape label colors
   ([`b0a59dd`](https://github.com/davidsmfreire/lexman-ble/commit/b0a59ddb8a1bbaee7c1b8615f91d24d2d467e421))
 
 
